@@ -1,10 +1,16 @@
 """
-Módulo principal para la silabificación de palabras.
+Main module for syllable division.
 """
 
-def complex_algorithm(word: str) -> list[str]:
+def andluh_epa_algorithm(word: str) -> list[str]:
     """
-    Algoritmo complejo para la silabificación de palabras.
+    complex algorithm for syllable division.
+    
+    Args:
+        word (str): The word to syllabify.
+        
+    Returns:
+        list[str]: sylables of the word.
     """
     return [word]
 
@@ -13,10 +19,10 @@ def syllabicate(word: str) -> list[str]:
     Divide una palabra en sílabas.
 
     Args:
-        word (str): La palabra a silabificar.
+        word (str): The word to syllabify.
 
     Returns:
-        list[str]: Lista de sílabas.
+        list[str]: sylables of the word.
 
     Examples:
         >>> syllabicate("ehemplo")
@@ -27,4 +33,4 @@ def syllabicate(word: str) -> list[str]:
     if len(word) == 1:
         return [word]
     else:
-        return complex_algorithm(word)
+        return andluh_epa_algorithm(word)

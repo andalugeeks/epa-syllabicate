@@ -28,7 +28,8 @@ class TestSyllabicate(unittest.TestCase):
         self.assertEqual(syllabicate("çôh"), ["çôh"])
         self.assertEqual(syllabicate("êttanda"), ["ê", "ttan", "da"])
         self.assertEqual(syllabicate("cohêl-lo"), ["co", "hêl", "lo"])
-
+        self.assertEqual(syllabicate("ôhhetibâh"), ["ô", "hhe", "ti", "bâh"])
+      
 
 if __name__ == "__main__":
-    unittest.main() 
+    unittest.main()
