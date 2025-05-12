@@ -23,7 +23,7 @@ Para contribuir al proyecto, primero clona el repositorio y luego instala las de
 git clone https://github.com/tu-usuario/epa-syllabicate.git
 cd epa-syllabicate
 python -m env .venv
-source .venv/bin/actibate
+source .venv/bin/activate
 python -m pip install -e ".[dev]"
 ```
 
@@ -45,4 +45,4 @@ pytest --cov=epa_syllabicate
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles. 
+Este proyecto está licenciado bajo la Licencia GPL v3 - ver el archivo [LICENSE](LICENSE) para más detalles. 
