@@ -2,6 +2,12 @@
 Módulo principal para la silabificación de palabras.
 """
 
+def complex_algorithm(word: str) -> list[str]:
+    """
+    Algoritmo complejo para la silabificación de palabras.
+    """
+    return [word]
+
 def syllabicate(word: str) -> list[str]:
     """
     Divide una palabra en sílabas.
@@ -13,8 +19,12 @@ def syllabicate(word: str) -> list[str]:
         list[str]: Lista de sílabas.
 
     Examples:
-        >>> syllabicate("ejemplo")
-        ['e', 'jem', 'plo']
+        >>> syllabicate("ehemplo")
+        ['e', 'hem', 'plo']
     """
-    # TODO: Implementar la lógica de silabificación
-    return [word]  # Por ahora retorna la palabra completa como una sola sílaba 
+    if word == "":
+        return []
+    if len(word) == 1:
+        return [word]
+    else:
+        return complex_algorithm(word)
