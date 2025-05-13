@@ -3,7 +3,11 @@ from lark import Lark, Tree
 grammar = """
     start: silaba+
 
-    silaba: CONSONANTE? VOCAL CONSONANTE?
+    silaba: CONSONANTE VOCAL
+          | QU /[eiêî]/
+          | CONSONANTE? VOCAL CONSONANTE?
+          | VOCAL CONSONANTE CONSONANTE 
+    QU: "qu"
     CONSONANTE: /[bcçdfghjklmnñpqrstvwxyz]/
     VOCAL: /[aeiouáéíóúâêîôûàèìòùâêîôû]/
 
@@ -11,9 +15,11 @@ grammar = """
     %ignore WS
 """
 
+
 def _parse_word(word: str) -> Tree:
     parser = Lark(grammar)
     return parser.parse(word)
+
 
 def _parse_tree(tree: Tree) -> list[str]:
     result = []
@@ -25,8 +31,9 @@ def _parse_tree(tree: Tree) -> list[str]:
                 chars.extend(child.children)
             else:
                 chars.append(child)
-        result.append(''.join(chars))
+        result.append("".join(chars))
     return result
+
 
 def syllabicate(word: str) -> list[str]:
     tree = _parse_word(word)

@@ -1,6 +1,7 @@
 """
 Main module for syllable division.
 """
+
 from epa_syllabicate.lark_syllabicator import syllabicate as lark_syllabicate
 
 
