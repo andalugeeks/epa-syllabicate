@@ -1,18 +1,8 @@
 """
 Main module for syllable division.
 """
+from epa_syllabicate.lark_syllabicator import syllabicate as lark_syllabicate
 
-def andluh_epa_algorithm(word: str) -> list[str]:
-    """
-    complex algorithm for syllable division.
-    
-    Args:
-        word (str): The word to syllabify.
-        
-    Returns:
-        list[str]: sylables of the word.
-    """
-    return [word]
 
 def syllabicate(word: str) -> list[str]:
     """
@@ -28,9 +18,10 @@ def syllabicate(word: str) -> list[str]:
         >>> syllabicate("ehemplo")
         ['e', 'hem', 'plo']
     """
-    if word == "":
+    low_word = word.lower()
+    if low_word == "":
         return []
-    if len(word) == 1:
-        return [word]
+    if len(low_word) == 1:
+        return [low_word]
     else:
-        return andluh_epa_algorithm(word)
+        return lark_syllabicate(low_word)

@@ -17,6 +17,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "lark>=1.2.0"
+]
 
 [project.urls]
 "Homepage" = ""
@@ -26,6 +29,7 @@ classifiers = [
 dev = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",
+    "ipdb",
 ]
 
 [tool.pytest.ini_options]
