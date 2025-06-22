@@ -29,7 +29,7 @@ C_LIQU: set = C_LIQU_LATE | C_LIQU_FLAP
 
 C_CODA: set = {"n", "h"}
 
-C_FULL: set = C_PLOS_ALVE | C_OBST_LIQU | C_LIQU | C_CODA | {"ç", "x", "y", "m", "ñ"}
+C_FULL: set = C_PLOS_ALVE | C_OBST_LIQU | C_LIQU | C_CODA | {"ç", "x", "y", "m", "ñ", "s", "z"}
 
 
 FULL_SET: set = V_FULL | C_FULL
