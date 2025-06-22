@@ -102,7 +102,7 @@ def syllabify(x: str) -> list:
     l: list[str] = unpack_list(l)
 
     # handles n and h in end of word
-    if l[-1] in C_CODA:
+    if len(l) >= 2 and l[-1] in C_CODA:
         l[-2] = l[-2] + l[-1]
         l.pop()
 
