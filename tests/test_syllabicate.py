@@ -37,7 +37,6 @@ class TestSyllabicate(unittest.TestCase):
                                    f"Para la palabra '{word}': esperado {expected_syllables}, obtenido {result}")
                 except AssertionError as e:
                     failed_cases.append(f"Palabra: {word} - {str(e)}")
-                    raise
         
         if failed_cases:
             self.fail(f"Fallaron {len(failed_cases)} casos:\n" + "\n".join(failed_cases))
