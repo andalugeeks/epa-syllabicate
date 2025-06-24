@@ -1,4 +1,4 @@
-# Makefile for the epa-syllabicate project
+# Makefile for the epa-syllabifier project
 
 .PHONY: help install install-dev test test-verbose test-coverage clean format lint all venv activate
 
@@ -67,6 +67,8 @@ install-dev: ensure-venv ## Install development dependencies
 	@echo "$(GREEN)Installing development dependencies...$(NC)"
 	$(VENV_PIP) install -e ".[dev]"
 	@echo "$(YELLOW)Using virtual environment: $(VENV_DIR)$(NC)"
+	# add module install using editable mode
+	$(VENV_PIP) install -e ".[dev]"
 
 test: install-dev ## Run all tests
 	@echo "$(GREEN)Running tests...$(NC)"
@@ -92,10 +94,10 @@ test-coverage: install-dev ## Run tests with code coverage
 	@echo "$(GREEN)Running tests with coverage...$(NC)"
 	@if [ -d "$(VENV_DIR)" ]; then \
 		echo "$(BLUE)Using virtual environment: $(VENV_DIR)$(NC)"; \
-		$(VENV_PYTHON) -m pytest --cov=epa_syllabicate --cov-report=html --cov-report=term tests/; \
+		$(VENV_PYTHON) -m pytest --cov=epa_syllabifier --cov-report=html --cov-report=term tests/; \
 	else \
 		echo "$(YELLOW)No virtual environment found, using system Python$(NC)"; \
-		$(PYTHON) -m pytest --cov=epa_syllabicate --cov-report=html --cov-report=term tests/; \
+		$(PYTHON) -m pytest --cov=epa_syllabifier --cov-report=html --cov-report=term tests/; \
 	fi
 
 test-watch: install-dev ## Run tests in watch mode (requires pytest-watch)
@@ -112,20 +114,20 @@ format: ## Format code with black
 	@echo "$(GREEN)Formatting code...$(NC)"
 	@if [ -d "$(VENV_DIR)" ]; then \
 		echo "$(BLUE)Using virtual environment: $(VENV_DIR)$(NC)"; \
-		$(VENV_PYTHON) -m black epa_syllabicate/ tests/; \
+		$(VENV_PYTHON) -m black epa_syllabifier/ tests/; \
 	else \
 		echo "$(YELLOW)No virtual environment found, using system Python$(NC)"; \
-		$(PYTHON) -m black epa_syllabicate/ tests/; \
+		$(PYTHON) -m black epa_syllabifier/ tests/; \
 	fi
 
 lint: ## Check code format
 	@echo "$(GREEN)Checking code format...$(NC)"
 	@if [ -d "$(VENV_DIR)" ]; then \
 		echo "$(BLUE)Using virtual environment: $(VENV_DIR)$(NC)"; \
-		$(VENV_PYTHON) -m black --check epa_syllabicate/ tests/; \
+		$(VENV_PYTHON) -m black --check epa_syllabifier/ tests/; \
 	else \
 		echo "$(YELLOW)No virtual environment found, using system Python$(NC)"; \
-		$(PYTHON) -m black --check epa_syllabicate/ tests/; \
+		$(PYTHON) -m black --check epa_syllabifier/ tests/; \
 	fi
 
 clean: ## Clean temporary files
@@ -171,7 +173,7 @@ quick-test: ## Quick test without detailed output
 	fi
 
 # Command to run a specific test
-# Usage: make test-file FILE=test_syllabicate.py
+# Usage: make test-file FILE=test_syllabifier.py
 test-file: install-dev ## Run a specific test file (use FILE=filename)
 	@echo "$(GREEN)Running $(FILE)...$(NC)"
 	@if [ -d "$(VENV_DIR)" ]; then \
