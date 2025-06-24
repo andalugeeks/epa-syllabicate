@@ -1,16 +1,16 @@
-# EPA Syllabicate
+# EPA Syllabifier
 
 Módulo Python para la silabificación de palabras.
 
 ## Uso
 
 ```python
-from epa_syllabicate import syllabicate
+from epa_syllabifier import syllabify
 
 # Ejemplo de uso
-word = "ehemplo"
-silabes = syllabicate(word)
-print(silabas)  # ['e', 'hem', 'plo']
+word = "ejemplo"
+syllables = syllabify(word)
+print(syllables)  # ['e', 'jem', 'plo']
 ```
 
 ## Desarrollo
@@ -20,9 +20,9 @@ print(silabas)  # ['e', 'hem', 'plo']
 Para contribuir al proyecto, primero clona el repositorio y luego instala las dependencias de desarrollo:
 
 ```bash
-git clone https://github.com/tu-usuario/epa-syllabicate.git
-cd epa-syllabicate
-python -m env .venv
+git clone https://github.com/andalugeeks/epa-syllabifier.git
+cd epa-syllabifier
+python -m venv .venv
 source .venv/bin/activate
 python -m pip install -e ".[dev]"
 ```
@@ -36,7 +36,7 @@ Para ejecutar los tests:
 pytest
 
 # Ejecutar tests con cobertura
-pytest --cov=epa_syllabicate
+pytest --cov=epa_syllabifier
 ```
 
 ## Requisitos

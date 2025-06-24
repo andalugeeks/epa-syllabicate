@@ -5,10 +5,10 @@ Tests for the syllabify function using the corpus epa_syllabified.csv
 import unittest
 import csv
 import os
-from epa_syllabicate import syllabify
+from epa_syllabifier import syllabify
 
 
-class TestSyllabicate(unittest.TestCase):
+class TestSyllabifier(unittest.TestCase):
     
     @classmethod
     def setUpClass(cls):
@@ -75,7 +75,7 @@ def generate_individual_tests():
             test_method = make_test(word, expected_syllables)
             test_method.__name__ = test_name
             test_method.__doc__ = f'Test para la palabra "{word}" -> {expected_syllables}'
-            setattr(TestSyllabicate, test_name, test_method)
+            setattr(TestSyllabifier, test_name, test_method)
 
 
 # Generate individual tests
