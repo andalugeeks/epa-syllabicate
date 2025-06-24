@@ -1,3 +1,3 @@
 """
-Tests para el módulo epa_syllabicate
+Tests para el módulo epa_syllabifier
 """

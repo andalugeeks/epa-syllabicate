@@ -1,16 +1,13 @@
-# EPA Syllabicate
+# EPA Syllabifier
 
 Módulo Python para la silabificación de palabras.
 
 ## Uso
 
 ```python
-from epa_syllabicate import syllabicate
-
-# Ejemplo de uso
-word = "ehemplo"
-silabes = syllabicate(word)
-print(silabas)  # ['e', 'hem', 'plo']
+>>> from epa_syllabifier import syllabify
+>>> syllabify("arcançía")
+['ar', 'can', 'çía']
 ```
 
 ## Desarrollo
@@ -20,11 +17,14 @@ print(silabas)  # ['e', 'hem', 'plo']
 Para contribuir al proyecto, primero clona el repositorio y luego instala las dependencias de desarrollo:
 
 ```bash
-git clone https://github.com/tu-usuario/epa-syllabicate.git
-cd epa-syllabicate
-python -m env .venv
-source .venv/bin/activate
-python -m pip install -e ".[dev]"
+git clone https://github.com/andalugeeks/epa-syllabifier.git
+cd epa-syllabifier
+
+# Configuración completa de desarrollo (crea venv e instala dependencias)
+make dev-setup
+
+# Ver comando para activar el entorno virtual
+make activate
 ```
 
 ### Ejecución de tests
@@ -33,10 +33,38 @@ Para ejecutar los tests:
 
 ```bash
 # Ejecutar todos los tests
-pytest
+make test
 
 # Ejecutar tests con cobertura
-pytest --cov=epa_syllabicate
+make test-coverage
+
+# Ejecutar tests con salida detallada
+make test-verbose
+
+# Ejecutar tests
+make quick-test
+```
+
+### Comandos útiles de desarrollo
+
+```bash
+# Ver todos los comandos disponibles
+make help
+
+# Formatear código con Black
+make format
+
+# Verificar formato del código
+make lint
+
+# Construir el paquete
+make build
+
+# Limpiar archivos temporales
+make clean
+
+# Configuración completa: limpieza + instalación + tests
+make all
 ```
 
 ## Requisitos

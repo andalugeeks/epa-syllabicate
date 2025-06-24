@@ -3,14 +3,14 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "epa_syllabicate"
+name = "epa_syllabifier"
 version = "0.2.2"
 description = "Automatic syllabification module for Spanish words"
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
 authors = [
-    { name = "EPA Team" }
+    { name = "Andalugeeks Team" }
 ]
 keywords = ["syllabification", "spanish", "nlp", "text-processing", "linguistics"]
 classifiers = [
@@ -31,9 +31,9 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-"Homepage" = "https://github.com/andalugeeks/epa-syllabicate"
-"Bug Tracker" = "https://github.com/andalugeeks/epa-syllabicate/issues"
-"Repository" = "https://github.com/andalugeeks/epa-syllabicate.git"
+"Homepage" = "https://github.com/andalugeeks/epa-syllabifier"
+"Bug Tracker" = "https://github.com/andalugeeks/epa-syllabifier/issues"
+"Repository" = "https://github.com/andalugeeks/epa-syllabifier.git"
 
 [project.optional-dependencies]
 dev = [
