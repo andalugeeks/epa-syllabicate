@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic syllabification functionality
 - Test suite with pytest
 - Project configuration with pyproject.toml
+## v0.2.1 (2025-06-24)
+
+### Fix
+
+- **.github/workflows/release.yml**: fixes issues in release
+
 ## v0.2.0 (2025-06-24)
 
 ### Feat
