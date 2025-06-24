@@ -12,10 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Actions workflow for automated PyPI publishing
 - Commitizen integration for automated versioning and changelog generation
 
-## [0.1.0] - 2024-01-01
+## [0.0.1] - 2025-06-24
 
 ### Added
 - Initial release of epa_syllabicate module
 - Basic syllabification functionality
 - Test suite with pytest
-- Project configuration with pyproject.toml 
+- Project configuration with pyproject.toml
