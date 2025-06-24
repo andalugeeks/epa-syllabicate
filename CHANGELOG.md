@@ -33,3 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Implements a syllabifier using lark module
 - create a python project boilerplate with python3.8 (#1)
 
+### Fix
+
+- empty case and Makefile improvements(#5)
+- minors and black over the code
